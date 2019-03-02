@@ -2,7 +2,7 @@
 
 @section('content')
     <h3 class="page-title">@lang('quickadmin.appointments.title')</h3>
-    {!! Form::open(['method' => 'POST', 'route' => ['admin.appointments.store']]) !!}
+    {!! Form::open(['method' => 'POST', 'route' => ['admin.appointments.store'], 'autocomplete' =>'off']) !!}
 
     <div class="panel panel-default">
         <div class="panel-heading">

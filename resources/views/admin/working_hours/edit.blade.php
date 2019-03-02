@@ -3,7 +3,7 @@
 @section('content')
     <h3 class="page-title">@lang('quickadmin.working-hours.title')</h3>
     
-    {!! Form::model($working_hour, ['method' => 'PUT', 'route' => ['admin.working_hours.update', $working_hour->id]]) !!}
+    {!! Form::model($working_hour, ['method' => 'PUT', 'route' => ['admin.working_hours.update', $working_hour->id], 'autocomplete' =>'off']) !!}
 
     <div class="panel panel-default">
         <div class="panel-heading">
