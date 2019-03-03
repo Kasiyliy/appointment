@@ -6,7 +6,7 @@
 <script src="{{asset('js/pdfmake.js')}}"></script>
 <script src="{{asset('js/vfs_fonts.js')}}"></script>
 <script src="{{asset('js/buttons_html.js')}}"></script>
-<script src="{{asset('js/buttons.print.js')}}"></script>x
+<script src="{{asset('js/buttons.print.js')}}"></script>
 <script src="{{asset('js/colvis.js')}}"></script>
 <script src="{{asset('js/datatables.select.js')}}"></script>
 <script src="{{asset('js/jquery-ui.js')}}"></script>

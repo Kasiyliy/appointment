@@ -1,11 +1,13 @@
 <?php
-Route::get('/', function () { return redirect('/admin/home'); });
 
+
+Route::get('/', 'HomeController@welcome');
+Route::post('/appointment/save', 'HomeController@store')->name('front.appoint.save');
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('auth.login');
 $this->post('login', 'Auth\LoginController@login')->name('auth.login');
 $this->post('logout', 'Auth\LoginController@logout')->name('auth.logout');
-
+Route::get('admin/get-employees', 'Admin\EmployeesController@GetEmployees');
 // Change Password Routes...
 $this->get('change_password', 'Auth\ChangePasswordController@showChangePasswordForm')->name('auth.change_password');
 $this->patch('change_password', 'Auth\ChangePasswordController@changePassword')->name('auth.change_password');
@@ -24,7 +26,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::post('users_mass_destroy', ['uses' => 'Admin\UsersController@massDestroy', 'as' => 'users.mass_destroy']);
     Route::resource('clients', 'Admin\ClientsController');
     Route::post('clients_mass_destroy', ['uses' => 'Admin\ClientsController@massDestroy', 'as' => 'clients.mass_destroy']);
-	Route::get('get-employees', 'Admin\EmployeesController@GetEmployees');
+
     Route::resource('employees', 'Admin\EmployeesController');
     Route::post('employees_mass_destroy', ['uses' => 'Admin\EmployeesController@massDestroy', 'as' => 'employees.mass_destroy']);
     Route::resource('working_hours', 'Admin\WorkingHoursController');

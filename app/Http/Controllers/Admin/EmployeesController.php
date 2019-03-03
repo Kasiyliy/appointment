@@ -163,7 +163,7 @@ class EmployeesController extends Controller
 	
 	public function GetEmployees(Request $request)
 	{
-		$employees = DB::table('employees')->join('working_hours', function ($join) use ($request) {
+		$employees = Employee::select('employees.*')->join('working_hours', function ($join) use ($request) {
 			$join->on('employees.id', '=', 'working_hours.employee_id')
 			->where('working_hours.date', '=', $request->date);
 		})->get();
