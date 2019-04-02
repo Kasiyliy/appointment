@@ -9,8 +9,14 @@ use App\Http\Controllers\Controller;
 
 class Homecontroller extends Controller
 {
-    public function getEmployees($id){
-        $employees = Employee::all();
+    public function getEmployees(Request $request){
+        $employees = Employee::select('employees.*')->join('working_hours', function ($join) use ($request) {
+            $join->on('employees.id', '=', 'working_hours.employee_id')
+                ->where('working_hours.date', '=', $request->date);
+        })->get();
+        $service = \App\Service::find($request->service_id);
+
+        
         return response()->json($employees);
     }
 

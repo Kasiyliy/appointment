@@ -11,7 +11,7 @@
     <li >
         <a href="{{ url('/') }}"  class="app-menu__item {{ $request->segment(2) == 'home' ? 'active' : '' }}" >
             <i class="app-menu__icon fa fa-dashboard"></i><span
-                    class="app-menu__label">&nbsp;@lang('quickadmin.qa_dashboard')</span>
+                    class="app-menu__label">&nbsp;To website</span>
 
         </a>
     </li>
