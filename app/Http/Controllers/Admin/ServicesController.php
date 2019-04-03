@@ -97,7 +97,9 @@ class ServicesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $service = Service::findOrFail($id);
+        $service->delete();
+        return redirect()->route('admin.services.index');
     }
 	
 	public function massDestroy(Request $request)
