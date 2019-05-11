@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Appointment;
 use App\Client;
 use App\Http\Requests;
+use App\Http\Requests\Admin\StoreCommentsRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
@@ -36,8 +37,19 @@ class HomeController extends Controller
             'clients' => \App\Client::get(),
             'employees' => \App\Employee::get(),
             'services' => \App\Service::get(),
+            'comments' => \App\Comment::get()->take(3),
         ];
         return view('front.index',$relations);
+    }
+
+    public function commentStore(StoreCommentsRequest $request)
+    {
+
+        $comment = \App\Comment::create($request->all());
+
+
+
+        return redirect()->route('welcome');
     }
 
     public function store(Requests\Admin\IndexStoreAppointmentsRequest $request)

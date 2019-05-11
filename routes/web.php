@@ -1,7 +1,7 @@
 <?php
 
 
-Route::get('/', 'HomeController@welcome');
+Route::get('/', 'HomeController@welcome')->name('welcome');
 Route::post('/appointment/save', 'HomeController@store')->name('front.appoint.save');
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('auth.login');
@@ -17,6 +17,7 @@ $this->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 $this->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('auth.password.reset');
 $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 $this->post('password/reset', 'Auth\ResetPasswordController@reset')->name('auth.password.reset');
+Route::post('comment/add', 'HomeController@commentStore')->name('front.comment.store');
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('/home', 'HomeController@index');
@@ -35,5 +36,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::post('appointments_mass_destroy', ['uses' => 'Admin\AppointmentsController@massDestroy', 'as' => 'appointments.mass_destroy']);
 	Route::resource('services', 'Admin\ServicesController');
 	Route::post('services_mass_destroy', ['uses' => 'Admin\ServicesController@massDestroy', 'as' => 'services.mass_destroy']);
+
+	Route::resource('comments', 'Admin\CommentsController');
 	
 });

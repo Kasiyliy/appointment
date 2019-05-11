@@ -59,7 +59,15 @@
             </a>
         </li>
     @endcan
-
+    @can('comments_access')
+        <li class="">
+            <a href="{{ route('admin.comments.index') }}" class="app-menu__item {{ $request->segment(2) == 'comments' ? 'active' : '' }}" >
+                <i class="app-menu__icon fa fa-calendar"></i><span
+                        class="app-menu__label">&nbsp;
+                    @lang('quickadmin.comments.title')</span>
+            </a>
+        </li>
+    @endcan
     @can('user_management_access')
     <li class="treeview {{ $request->segment(2) == 'roles' ? ' is-expanded' : '' }} {{ $request->segment(2) == 'users' ? 'is-expanded' : '' }}">
         <a class="app-menu__item" href="{{ route('admin.roles.index') }}" data-toggle="treeview">
