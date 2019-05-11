@@ -50,8 +50,6 @@ class ServicesController extends Controller
         }
         $service = Service::create($request->all());
 
-
-
         return redirect()->route('admin.services.index');
     }
 

@@ -456,9 +456,72 @@
       </div>
     </div>
 
-    
-    
-    
+
+    <div class="promo py-5 bg-primary">
+      <div class="container text-center">
+        <h2 class="site-heading text-black">People <strong>Says</strong></h2>
+        <div id="date-countdown" class="mt-0"></div>
+      </div>
+    </div>
+
+
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-6 text-center">
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                Leave your comment
+              </div>
+              <div class="panel-body">
+
+                <form>
+                  <div class="form-group">
+                    <label for="email">Name:</label>
+                    <input type="email" class="form-control" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Comment:</label>
+                    <textarea rows="5" type="comment" class="form-control" id="email"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-default">Leave</button>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="site-block-testimony p-4 text-center">
+              <div>
+                <p>Dolores perferendis ipsam animi fuga, dolor pariatur aliquam esse. Modi maiores minus velit iste enim sunt iusto dolore</p>
+                <p><strong class="font-weight-bold">Nathalie Oscar</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="site-block-testimony p-4 text-center active">
+              <div>
+                <p>Dolores perferendis ipsam animi fuga dolor pariatur aliquam esse. Modi maiores minus velit iste enim sunt iusto dolore</p>
+                <p><strong class="font-weight-bold">Linda Uler</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="site-block-testimony p-4 text-center">
+              <div>
+                <p>Dolores perferendis ipsam animi fuga dolor pariatur aliquam esse. Modi maiores minus velit iste enim sunt iusto dolore</p>
+                <p><strong class="font-weight-bold">Chris Coodard</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <footer class="site-footer border-top">
       <div class="container">
         <div class="row pt-5 mt-5 text-center">
