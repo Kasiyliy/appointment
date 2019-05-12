@@ -62,7 +62,7 @@
     @can('comments_access')
         <li class="">
             <a href="{{ route('admin.comments.index') }}" class="app-menu__item {{ $request->segment(2) == 'comments' ? 'active' : '' }}" >
-                <i class="app-menu__icon fa fa-calendar"></i><span
+                <i class="app-menu__icon fa fa-comments fa-lg"></i><span
                         class="app-menu__label">&nbsp;
                     @lang('quickadmin.comments.title')</span>
             </a>
