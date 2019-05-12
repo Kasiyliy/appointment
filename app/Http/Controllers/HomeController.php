@@ -6,8 +6,6 @@ use App\Appointment;
 use App\Client;
 use App\Http\Requests;
 use App\Http\Requests\Admin\StoreCommentsRequest;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
 
 class HomeController extends Controller
 {

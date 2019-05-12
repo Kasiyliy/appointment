@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-use Twilio\Rest\Client as NewClient;
+use App\Appointment;
+use App\Client;
 use App\Employee;
 use App\Service;
 use Illuminate\Http\Request;
@@ -25,8 +26,15 @@ class HomeController extends Controller
         return response()->json($services);
     }
 
-    public function store(Requests\Admin\IndexStoreAppointmentsRequest $request)
+    public function getService(Request $request){
+        $service = Service::findOrFail($request->service_id);
+        return response()->json($service);
+    }
+
+    public function store(Request $request)
     {
+
+
         $employee = \App\Employee::find($request->employee_id);
         $working_hours = \App\WorkingHour::where('employee_id', $request->employee_id)->whereDay('date', '=', date("d", strtotime($request->date)))->whereTime('start_time', '<=', date("H:i", strtotime("".$request->starting_hour.":".$request->starting_minute.":00")))->whereTime('finish_time', '>=', date("H:i", strtotime("".$request->finish_hour.":".$request->finish_minute.":00")))->get();
 
@@ -49,8 +57,8 @@ class HomeController extends Controller
         $appointment = new Appointment();
         $appointment->client_id = $client->id;
         $appointment->employee_id = $request->employee_id;
-        $appointment->start_time = "".$request->date." ".$request->starting_hour .":".$request->starting_minute.":00";
-        $appointment->finish_time = "".$request->date." ".$request->finish_hour .":".$request->finish_minute.":00";
+        $appointment->start_time = $request->start_time;
+        $appointment->finish_time = $request->finish_time;
         $appointment->comments = $request->comments;
         $appointment->save();
 
