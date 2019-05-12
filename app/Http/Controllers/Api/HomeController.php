@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-
+use Twilio\Rest\Client as NewClient;
 use App\Employee;
 use App\Service;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class Homecontroller extends Controller
+class HomeController extends Controller
 {
     public function getEmployees(Request $request){
         $employees = Employee::select('employees.*')->join('working_hours', function ($join) use ($request) {
@@ -16,7 +16,7 @@ class Homecontroller extends Controller
         })->get();
         $service = \App\Service::find($request->service_id);
 
-        
+
         return response()->json($employees);
     }
 
@@ -53,6 +53,16 @@ class Homecontroller extends Controller
         $appointment->finish_time = "".$request->date." ".$request->finish_hour .":".$request->finish_minute.":00";
         $appointment->comments = $request->comments;
         $appointment->save();
+
+
+        $message = 'Your appointment is on ' . $appointment->start_time . ' till '
+        . $appointment->finish_time  . '. You will be serviced by '
+        . $employee->firt_name . ' '. $employee->last_name;
+
+        $url = 'https://smsc.kz/sys/send.php?login=kasya&psw=2299353a&phones=' . trim($client->phone) . '&mes='.$message;
+        file_get_contents($url);
+
+
         return response()->json(['success' => true], 200);
 
     }
