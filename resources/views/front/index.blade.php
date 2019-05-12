@@ -220,7 +220,8 @@
                                     <div class="row">
                                         <div class="col-xs-12 form-group">
                                             {!! Form::label('phone', 'Phone', ['class' => 'control-label']) !!}
-                                            {!! Form::text('phone', old('phone'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
+                                            <span>Example: +77071122334</span>
+                                            {!! Form::text('phone', old('phone'), ['class' => 'form-control', 'placeholder' => '', 'required' => '', 'pattern' => '^\+77(\d{9})$']) !!}
                                             <p class="help-block"></p>
                                             @if($errors->has('phone'))
                                                 <p class="help-block">
