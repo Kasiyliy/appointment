@@ -62,10 +62,9 @@ class HomeController extends Controller
         $appointment->comments = $request->comments;
         $appointment->save();
 
-
-        $message = 'Your appointment is on ' . $appointment->start_time . ' till '
-        . $appointment->finish_time  . '. You will be serviced by '
-        . $employee->firt_name . ' '. $employee->last_name;
+        $message = 'Ваш прием поставлен на ' . $appointment->start_time . ' до '
+            . $appointment->finish_time  . '. Ваш обслуживающий: '
+            . $employee->firt_name . ' '. $employee->last_name;
 
         $url = 'https://smsc.kz/sys/send.php?login=kasya&psw=2299353a&phones=' . trim($client->phone) . '&mes='.$message;
         file_get_contents($url);

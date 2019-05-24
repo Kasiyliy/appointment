@@ -63,8 +63,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <span class="sub-text">We Priority Your</span>
-                    <h1>Your <strong>New Smile</strong></h1>
+                    <span class="sub-text">Мы работаем ради вашей услуги</span>
+                    <h1>Спасибо<strong> за доверие. </strong></h1>
                 </div>
             </div>
         </div>
@@ -79,8 +79,8 @@
                             <span class="icon flaticon-tooth font-weight-light text-white h2"></span>
                         </div>
                         <div class="text">
-                            <h3>Periontodology</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3>Современное оборудование</h3>
+                            <p>В нашей клинике используется новейшее немецкое стоматологическое оборудование, имеющее все необходимые сертификаты и лицензии</p>
                         </div>
                     </div>
                 </div>
@@ -90,8 +90,9 @@
                             <span class="icon flaticon-tooth-whitening font-weight-light text-white h2"></span>
                         </div>
                         <div class="text">
-                            <h3>Tooth Whitening</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3>Первая консультация бесплатно</h3>
+                            <p>В нашей клинике вы можете получить первую консультацию бесплатно, а также получить рекомендации и возможные варианты лечения.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -101,8 +102,8 @@
                             <span class="icon flaticon-tooth-pliers font-weight-light text-white h2"></span>
                         </div>
                         <div class="text">
-                            <h3>Preventative Care</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3>Квалифицированные стоматологи</h3>
+                            <p>Наши стоматологи имеют высшее профессиональное образование, и высокую квалификацию</p>
                         </div>
                     </div>
                 </div>
@@ -124,7 +125,7 @@
                     <span class="d-block mb-3">
                       <span class="flaticon-tooth-whitening display-3"></span>
                     </span>
-                    <h3>Tooth Whitening</h3>
+                    <h3>Отбеливание зубов</h3>
                   </span>
                             </a>
                         </div>
@@ -134,7 +135,7 @@
                     <span class="d-block mb-3">
                       <span class="flaticon-stethoscope display-3"></span>
                     </span>
-                    <h3>Stethoscope</h3>
+                    <h3>Лечение десен</h3>
                   </span>
                             </a>
                         </div>
@@ -146,7 +147,7 @@
                     <span class="d-block mb-3">
                       <span class="flaticon-first-aid-kit display-3"></span>
                     </span>
-                    <h3>First Aid Kit</h3>
+                    <h3>Протезирование</h3>
                   </span>
                             </a>
                         </div>
@@ -156,7 +157,7 @@
                     <span class="d-block mb-3">
                       <span class="flaticon-tooth-pliers display-3"></span>
                     </span>
-                    <h3>Tooth Pliers</h3>
+                    <h3>Лечение кариеса</h3>
                   </span>
                             </a>
                         </div>
@@ -172,7 +173,7 @@
             <div class="row">
                 <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2">
                     <div class="pl-lg-5 ml-lg-5">
-                        <h2 class="site-heading text-black">Online <strong>Appointment</strong> Request Form</h2>
+                        <h2 class="site-heading text-black">Онлайн <strong>Запись</strong> К Врачу</h2>
                         <p class="lead text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae
                             possimus sapiente temporibus, cum error.</p>
                         <p class="text-black-opacity-5">Temporibus adipisci modi nisi, in deserunt. Nam, veritatis
@@ -195,7 +196,7 @@
                                 <div class="col-xs-12 form-group">
                                     <div class="row">
                                         <div class="col-xs-12 form-group">
-                                            {!! Form::label('first_name', 'First name', ['class' => 'control-label']) !!}
+                                            {!! Form::label('first_name', 'Имя', ['class' => 'control-label']) !!}
                                             {!! Form::text('first_name', old('first_name'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
                                             <p class="help-block"></p>
                                             @if($errors->has('first_name'))
@@ -207,7 +208,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12 form-group">
-                                            {!! Form::label('last_name', 'Last name', ['class' => 'control-label']) !!}
+                                            {!! Form::label('last_name', 'Фамилия', ['class' => 'control-label']) !!}
                                             {!! Form::text('last_name', old('last_name'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
                                             <p class="help-block"></p>
                                             @if($errors->has('last_name'))
@@ -219,8 +220,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12 form-group">
-                                            {!! Form::label('phone', 'Phone', ['class' => 'control-label']) !!}
-                                            <span>Example: +77071122334</span>
+                                            {!! Form::label('phone', 'Номер телефона', ['class' => 'control-label']) !!}
+                                            <span>Пример: +77071122334</span>
                                             {!! Form::text('phone', old('phone'), ['class' => 'form-control', 'placeholder' => '', 'required' => '', 'pattern' => '^\+77(\d{9})$']) !!}
                                             <p class="help-block"></p>
                                             @if($errors->has('phone'))
@@ -246,9 +247,9 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 form-group">
-                                    {!! Form::label('service_id', 'Service*', ['class' => 'control-label']) !!}
+                                    {!! Form::label('service_id', 'Услуга', ['class' => 'control-label']) !!}
                                     <select id="service_id" name="service_id" class="form-control select2" required>
-                                        <option value="">Please select</option>
+                                        <option value="">Список услуг</option>
                                         @foreach($services as $service)
                                             <option value="{{ $service->id }}"
                                                     data-price="{{ $service->price }}" {{ (old("service_id") == $service->id ? "selected":"") }}>{{ $service->name }}</option>
@@ -265,7 +266,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 form-group">
-                                    {!! Form::label('date', 'Date*', ['class' => 'control-label']) !!}
+                                    {!! Form::label('date', 'Выберите дату', ['class' => 'control-label']) !!}
                                     {!! Form::text('date', old('date'), ['class' => 'form-control date', 'placeholder' => '', 'required' => '']) !!}
                                     <p class="help-block"></p>
                                     @if($errors->has('date'))
@@ -277,11 +278,11 @@
                             </div>
                             <div class="row" id="start_time" style="display: none;">
                                 <div class="col-xs-12 form-group">
-                                    {!! Form::label('start_time', 'Start time*', ['class' => 'control-label']) !!}
+                                    {!! Form::label('start_time', 'Начало', ['class' => 'control-label']) !!}
                                     <div class="form-inline">
                                         <select name="starting_hour" id="starting_hour" class="form-control" required
                                                 style="max-width: 85px;">
-                                            <option value="-1" selected>Please select</option>
+                                            <option value="-1" selected>Час</option>
                                             <option value="08">08</option>
                                             <option value="09">09</option>
                                             <option value="10">10</option>
@@ -297,7 +298,7 @@
                                         :
                                         <select name="starting_minute" id="starting_minute" class="form-control"
                                                 required style="max-width: 85px;">
-                                            <option value="-1" selected>Please select</option>
+                                            <option value="-1" selected>Мин</option>
                                             <option value="00">00</option>
                                             <option value="15">15</option>
                                             <option value="30">30</option>
@@ -308,11 +309,11 @@
                             </div>
                             <div class="row" id="finish_time" style="display: none;">
                                 <div class="col-xs-12 form-group">
-                                    {!! Form::label('finish_time', 'Finish time*', ['class' => 'control-label']) !!}
+                                    {!! Form::label('finish_time', 'Конец', ['class' => 'control-label']) !!}
                                     <div class="form-inline">
                                         <select name="finish_hour" id="finish_hour" class="form-control" required
                                                 style="max-width: 85px;">
-                                            <option value="-1" selected>Please select</option>
+                                            <option value="-1" selected>Час</option>
                                             <option value="08">08</option>
                                             <option value="09">09</option>
                                             <option value="10">10</option>
@@ -333,7 +334,7 @@
                                         :
                                         <select name="finish_minute" id="finish_minute" class="form-control" required
                                                 style="max-width: 85px;">
-                                            <option value="-1" selected>Please select</option>
+                                            <option value="-1" selected>Мин</option>
                                             <option value="00">00</option>
                                             <option value="15">15</option>
                                             <option value="30">30</option>
@@ -344,13 +345,13 @@
                             </div>
                             <hr/>
                             <div id="results" style="display: none;">
-                                <p class="total_time"><strong>Total time: <span id="time">0</span> hour(s)</strong></p>
-                                <p class="total_price"><strong>Total price: $<span id="price_total">0</span></strong>
+                                <p class="total_time"><strong>Время: <span id="time">0</span> час(ов)</strong></p>
+                                <p class="total_price"><strong>К оплате: <span id="price_total">0</span>₸</strong>
                                 </p>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 form-group">
-                                    {!! Form::label('comments', 'Comments', ['class' => 'control-label']) !!}
+                                    {!! Form::label('comments', 'Замечания к стоматологу', ['class' => 'control-label']) !!}
                                     {!! Form::textarea('comments', old('comments'), ['class' => 'form-control ', 'placeholder' => '']) !!}
                                     <p class="help-block"></p>
                                     @if($errors->has('comments'))
@@ -374,8 +375,9 @@
 
     <div class="promo py-5 bg-primary">
         <div class="container text-center">
-            <span class="d-block h4 mb-3 font-weight-light text-white">Promo For Tooth Cleaning from <del>$140.00</del> now <strong
-                        class="font-weight-bold">$50.00</strong></span>
+            <span class="d-block h4 mb-3 font-weight-light text-white"><strong
+                        class="font-weight-bold">Новейшее оборудование, опытные доктора, система внутреннего контроля качества услуг все это позволяет нам гарантировать высокий уровень. Для нас важно, чтобы качественная стоматология была доступна каждому
+</strong></span>
             <div id="date-countdown" class="mt-0"></div>
         </div>
     </div>
@@ -385,7 +387,7 @@
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-6 text-center">
-                    <h2 class="site-heading text-black mb-5">Our <strong>Services</strong></h2>
+                    <h2 class="site-heading text-black mb-5">Наши <strong>Услуги</strong></h2>
                 </div>
             </div>
             <div class="row">
@@ -475,7 +477,7 @@
 
     <div class="promo py-5 bg-primary">
         <div class="container text-center">
-            <h2 class="site-heading text-black">People <strong>Says</strong></h2>
+            <h2 class="site-heading text-black">Отзывы <strong>клиентов</strong></h2>
             <div id="date-countdown" class="mt-0"></div>
         </div>
     </div>
@@ -487,19 +489,19 @@
                 <div class="col-md-6 text-center">
                     <div class="panel panel-danger">
                         <div class="panel-heading">
-                            Leave your comment
+                            Оставьте свой отзыв
                         </div>
                         <div class="panel-body">
 
                             {!! Form::open(['method' => 'POST', 'route' => ['front.comment.store']]) !!}                                <div class="form-group">
-                                    {!! Form::label('name', 'Name*', ['class' => 'control-label']) !!}
-                                    {!! Form::text('name', old('name'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
-                                </div>
-                                <div class="form-group">
-                                    {!! Form::label('text', 'Text*', ['class' => 'control-label']) !!}
-                                    {!! Form::text('text', old('text'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
-                                </div>
-                            {!! Form::submit('Leave', ['class' => 'btn btn-default']) !!}
+                                {!! Form::label('name', 'Имя', ['class' => 'control-label']) !!}
+                                {!! Form::text('name', old('name'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('text', 'Отзыв', ['class' => 'control-label']) !!}
+                                {!! Form::text('text', old('text'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
+                            </div>
+                            {!! Form::submit('Оставить', ['class' => 'btn btn-default']) !!}
                             {!! Form::close() !!}
                         </div>
                     </div>
@@ -507,14 +509,14 @@
             </div>
             <div class="row">
                 @foreach($comments as $comment)
-                <div class="col-lg-4">
-                    <div class="site-block-testimony p-4 text-center active">
-                        <div>
-                            <p>{{$comment->text}}</p>
-                            <p><strong class="font-weight-bold">{{$comment->name}}</strong></p>
+                    <div class="col-lg-4">
+                        <div class="site-block-testimony p-4 text-center active">
+                            <div>
+                                <p>{{$comment->text}}</p>
+                                <p><strong class="font-weight-bold">{{$comment->name}}</strong></p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
