@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\api;
 use App\Appointment;
 use App\Client;
 use App\Comment;
