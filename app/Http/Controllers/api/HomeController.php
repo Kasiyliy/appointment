@@ -71,8 +71,8 @@ class HomeController extends Controller
         $appointment = new Appointment();
         $appointment->client_id = $client->id;
         $appointment->employee_id = $request->employee_id;
-        $appointment->start_time = $request->start_time;
-        $appointment->finish_time = $request->finish_time;
+        $appointment->start_time = "".$request->date." ".$request->starting_hour .":".$request->starting_minute.":00";
+        $appointment->finish_time = "".$request->date." ".$request->finish_hour .":".$request->finish_minute.":00";
         $appointment->comments = $request->comments;
         $appointment->save();
 
