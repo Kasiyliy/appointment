@@ -39,7 +39,8 @@ class HomeController extends Controller
 
     public function saveReview(Request $request){
         $review = new Comment();
-        $review->fill($request->all());
+        $review->name = ($request->name);
+        $review->text = ($request->text);
         $review->save();
         return response()->json($review);
     }
