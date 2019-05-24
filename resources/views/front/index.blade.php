@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dente &mdash; Colorlib Website Template</title>
+    <title>Стоматология - Алматы</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/bootstrap-datepicker.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
 
 
     <link rel="stylesheet" href="{{asset('front/fonts/flaticon/font/flaticon.css')}}">
@@ -45,26 +46,51 @@
 
 </head>
 <body>
-
 <div class="site-wrap">
 
-    <div class="site-mobile-menu">
-        <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close mt-3">
-                <span class="icon-close2 js-menu-toggle"></span>
+    {{--<div class="site-mobile-menu">--}}
+        {{--<div class="site-mobile-menu-header">--}}
+            {{--<div class="site-mobile-menu-close mt-3">--}}
+                {{--<span class="icon-close2 js-menu-toggle"></span>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="site-mobile-menu-body"></div>--}}
+    {{--</div> <!-- .site-mobile-menu -->--}}
+
+    <div class="my-slider">
+        <div class="site-blocks-cover item"
+             style="background-image: url({{asset('front/images/hero_bg_1_gradient.jpg')}})"
+             data-aos="fade" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <span class="sub-text">Мы работаем ради вашей услуги</span>
+                        <h1>Спасибо<strong> за доверие. </strong></h1>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
 
+        <div class="site-blocks-cover item"  style="background-image: url({{asset('front/images/hero_bg_1.jpg')}})"
+             data-aos="fade" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <span class="sub-text">Мы работаем ради вашей услуги</span>
+                        <h1>Спасибо<strong> за доверие. </strong></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="site-blocks-cover" style="background-image: url({{asset('front/images/hero_bg_1.jpg')}})"
-         data-aos="fade" data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <span class="sub-text">Мы работаем ради вашей услуги</span>
-                    <h1>Спасибо<strong> за доверие. </strong></h1>
+        <div class="site-blocks-cover item" style="background-image: url({{asset('front/images/hero_bg_2.jpg')}})"
+             data-aos="fade" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <span class="sub-text">Мы работаем ради вашей услуги</span>
+                        <h1>Спасибо<strong> за доверие. </strong></h1>
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,7 +106,8 @@
                         </div>
                         <div class="text">
                             <h3>Современное оборудование</h3>
-                            <p>В нашей клинике используется новейшее немецкое стоматологическое оборудование, имеющее все необходимые сертификаты и лицензии</p>
+                            <p>В нашей клинике используется новейшее немецкое стоматологическое оборудование, имеющее
+                                все необходимые сертификаты и лицензии</p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +118,8 @@
                         </div>
                         <div class="text">
                             <h3>Первая консультация бесплатно</h3>
-                            <p>В нашей клинике вы можете получить первую консультацию бесплатно, а также получить рекомендации и возможные варианты лечения.
+                            <p>В нашей клинике вы можете получить первую консультацию бесплатно, а также получить
+                                рекомендации и возможные варианты лечения.
                             </p>
                         </div>
                     </div>
@@ -119,6 +147,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="row row-items">
+
                         <div class="col-md-6">
                             <a href="#" class="d-flex text-center feature active p-4 mb-4">
                   <span class="align-self-center w-100">
@@ -129,6 +158,7 @@
                   </span>
                             </a>
                         </div>
+
                         <div class="col-md-6">
                             <a href="#" class="d-flex text-center feature p-4 mb-4">
                   <span class="align-self-center w-100">
@@ -139,6 +169,7 @@
                   </span>
                             </a>
                         </div>
+
                     </div>
                     <div class="row row-items last">
                         <div class="col-md-6">
@@ -174,11 +205,12 @@
                 <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2">
                     <div class="pl-lg-5 ml-lg-5">
                         <h2 class="site-heading text-black">Онлайн <strong>Запись</strong> К Врачу</h2>
-                        <p class="lead text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae
-                            possimus sapiente temporibus, cum error.</p>
-                        <p class="text-black-opacity-5">Temporibus adipisci modi nisi, in deserunt. Nam, veritatis
-                            pariatur fugit explicabo? Nemo eius, eaque saepe facilis quidem nisi. Officiis doloremque
-                            dolorum optio.</p>
+                        <p class="text-black-opacity-5">Новейшее оборудование, опытные доктора, система внутреннего
+                            контроля качества услуг все это позволяет нам гарантировать высокий уровень.
+                            Для нас важно, чтобы качественная стоматология была доступна каждому.</p>
+                        <h2 class="site-heading text-black">Наши <strong>контакты</strong></h2>
+                        <p class="lead text-black">Номер: 87087526858</p>
+                        <p class="lead text-black">Почта: ansar.khafizov@gmail.com</p>
                     </div>
                 </div>
                 <div class="col-lg-6 order-2 order-lg-1">
@@ -188,7 +220,7 @@
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            @lang('quickadmin.qa_create')
+                            Создать
                         </div>
 
                         <div class="panel-body">
@@ -391,85 +423,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="site-block-feature-2 d-flex rounded mb-5">
-                        <div class="mr-3">
-                            <span class="icon flaticon-tooth-whitening font-weight-light "></span>
-                        </div>
-                        <div class="text">
-                            <h3>Tooth Whitening</h3>
-                            <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam
-                                facilis.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="site-block-feature-2 d-flex rounded mb-5">
-                        <div class="mr-3">
-                            <span class="icon flaticon-stethoscope font-weight-light "></span>
-                        </div>
-                        <div class="text">
-                            <h3>Stethoscope</h3>
-                            <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam
-                                facilis.</p>
+                @foreach($services as $service)
+                    <div class="col-md-6 col-lg-4">
+                        <div class="site-block-feature-2 d-flex rounded mb-5">
+                            <div class="mr-3">
+                                <span class="icon flaticon-tooth-whitening font-weight-light "></span>
+                            </div>
+                            <div class="text">
+                                <h3>{{$service->name}}</h3>
+                                <p>Цена: {{$service->price}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="site-block-feature-2 d-flex rounded mb-5">
-                        <div class="mr-3">
-                            <span class="icon flaticon-dentist-chair font-weight-light "></span>
-                        </div>
-                        <div class="text">
-                            <h3>Dentist Chair</h3>
-                            <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam
-                                facilis.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="site-block-feature-2 d-flex rounded mb-5">
-                        <div class="mr-3">
-                            <span class="icon flaticon-tooth-pliers font-weight-light "></span>
-                        </div>
-                        <div class="text">
-                            <h3>Tooth Pliers</h3>
-                            <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam
-                                facilis.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="site-block-feature-2 d-flex rounded mb-5">
-                        <div class="mr-3">
-                            <span class="icon flaticon-first-aid-kit font-weight-light "></span>
-                        </div>
-                        <div class="text">
-                            <h3>First Aid Kit</h3>
-                            <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam
-                                facilis.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="site-block-feature-2 d-flex rounded mb-5">
-                        <div class="mr-3">
-                            <span class="icon flaticon-dentist-tools font-weight-light "></span>
-                        </div>
-                        <div class="text">
-                            <h3>Dentist Tools</h3>
-                            <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam
-                                facilis.</p>
-                        </div>
-                    </div>
-                </div>
-
-
+                @endforeach
             </div>
         </div>
     </div>
@@ -493,7 +459,8 @@
                         </div>
                         <div class="panel-body">
 
-                            {!! Form::open(['method' => 'POST', 'route' => ['front.comment.store']]) !!}                                <div class="form-group">
+                            {!! Form::open(['method' => 'POST', 'route' => ['front.comment.store']]) !!}
+                            <div class="form-group">
                                 {!! Form::label('name', 'Имя', ['class' => 'control-label']) !!}
                                 {!! Form::text('name', old('name'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
                             </div>
@@ -521,7 +488,8 @@
             </div>
         </div>
     </div>
-
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11626.636613054536!2d76.90667165!3d43.237605450000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skz!4v1558735790491!5m2!1sen!2skz"
+            width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
     <footer class="site-footer border-top">
         <div class="container">
@@ -529,7 +497,7 @@
                 <div class="col-md-12">
                     <p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;Colorlib</a>
+                        Copyright &copy;AlmatyDent</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
@@ -550,6 +518,7 @@
 <script src="{{asset('front/js/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{asset('front/js/bootstrap-datepicker.min.js')}}"></script>
 <script src="{{asset('front/js/aos.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
 @include('partials.javascripts')
 
 <script src="{{asset('front/js/main.js')}}"></script>
@@ -637,6 +606,24 @@
             });
         }
     }
+</script>
+<script type="module">
+    var slider = tns({
+        container: '.my-slider',
+        items: 3,
+        autoplay: true,
+        autoWidth: true,
+        autoHeight: true,
+        center: true,
+        controls: false,
+        nav: false,
+        navContainer:false,
+        autoplayButton: false,
+        autoplayButtonOutput: false,
+        autoplayResetOnVisibility: false,
+        controlsContainer: false,
+        controlsPosition: false,
+    });
 </script>
 </body>
 </html>
