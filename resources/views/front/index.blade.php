@@ -62,8 +62,8 @@
              style="background-image: url({{asset('front/images/hero_bg_1_gradient.jpg')}})"
              data-aos="fade" data-stellar-background-ratio="0.5">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-7">
+                <div class="row align-items-center" style="text-align: center">
+                    <div class="col-md-12">
                         <span class="sub-text">Мы работаем ради вашей услуги</span>
                         <h1>Спасибо<strong> за доверие. </strong></h1>
                     </div>
@@ -74,8 +74,8 @@
         <div class="site-blocks-cover item"  style="background-image: url({{asset('front/images/hero_bg_1.jpg')}})"
              data-aos="fade" data-stellar-background-ratio="0.5">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-7">
+                <div class="row align-items-center" style="text-align: center">
+                    <div class="col-md-12">
                         <span class="sub-text">Мы работаем ради вашей услуги</span>
                         <h1>Спасибо<strong> за доверие. </strong></h1>
                     </div>
@@ -86,8 +86,8 @@
         <div class="site-blocks-cover item" style="background-image: url({{asset('front/images/hero_bg_2.jpg')}})"
              data-aos="fade" data-stellar-background-ratio="0.5">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-7">
+                <div class="row align-items-center" style="text-align: center">
+                    <div class="col-md-12">
                         <span class="sub-text">Мы работаем ради вашей услуги</span>
                         <h1>Спасибо<strong> за доверие. </strong></h1>
                     </div>
