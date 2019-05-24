@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 use App\Appointment;
 use App\Client;
+use App\Comment;
 use App\Employee;
 use App\Service;
 use Illuminate\Http\Request;
@@ -29,6 +30,18 @@ class HomeController extends Controller
     public function getService(Request $request){
         $service = Service::findOrFail($request->service_id);
         return response()->json($service);
+    }
+
+    public function getReviews(){
+        $reviews = Comment::orderBy('id' , 'desc')->take(3)->get();
+        return response()->json($reviews);
+    }
+
+    public function saveReview(Request $request){
+        $review = new Comment();
+        $review->fill($request->all());
+        $review->save();
+        return response()->json($review);
     }
 
     public function store(Request $request)
