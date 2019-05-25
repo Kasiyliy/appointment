@@ -393,7 +393,7 @@
                                     @endif
                                 </div>
                             </div>
-                            {!! Form::submit(trans('quickadmin.qa_save'), ['class' => 'btn btn-danger']) !!}
+                            {!! Form::submit('Сохранить', ['class' => 'btn btn-danger']) !!}
                         </div>
                     </div>
 
@@ -494,14 +494,26 @@
     <footer class="site-footer border-top">
         <div class="container">
             <div class="row pt-5 mt-5 text-center">
-                <div class="col-md-12">
+                <div class="col-md-4">
                     <p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;AlmatyDent</a>
+
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
+                <div class="col-md-4">
+                    <p>
+                        <a class="btn btn-danger text-white" href="/login">Войти</a>
+                    </p>
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;AlmatyDent
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+                <div class="col-md-4">
 
+                </div>
             </div>
         </div>
     </footer>
