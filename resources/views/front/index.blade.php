@@ -95,7 +95,6 @@
             </div>
         </div>
     </div>
-
     <div class="site-block-1">
         <div class="container">
             <div class="row">
@@ -139,6 +138,19 @@
         </div>
     </div>
 
+    <div class="promo py-5 bg-primary">
+        <div class="container text-center">
+            <div class="col-md-4">
+                <h2 class="site-heading text-white"><a href="#price_list" class="btn btn-primary">Прайс лист</a></h2>
+            </div>
+            <div class="col-md-4">
+                <h2 class="site-heading text-white"><a href="#reviews" class="btn btn-primary">Отзывы</a></h2>
+            </div>
+            <div class="col-md-4">
+                <h2 class="site-heading text-white"><a href="#zapis" class="btn btn-primary">Запись</a></h2>
+            </div>
+        </div>
+    </div>
     <div class="site-section site-block-3">
         <div class="container">
             <div class="row">
@@ -199,7 +211,7 @@
     </div>
 
 
-    <div class="site-section site-block-appointment">
+    <div class="site-section site-block-appointment" id="zapis">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2">
@@ -415,7 +427,7 @@
     </div>
 
 
-    <div class="site-section bg-light">
+    <div class="site-section bg-light" id="price_list">
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-6 text-center">
@@ -441,7 +453,7 @@
     </div>
 
 
-    <div class="promo py-5 bg-primary">
+    <div class="promo py-5 bg-primary" id="reviews">
         <div class="container text-center">
             <h2 class="site-heading text-black">Отзывы <strong>клиентов</strong></h2>
             <div id="date-countdown" class="mt-0"></div>
