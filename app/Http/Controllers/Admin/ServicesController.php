@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\Controller;
 use App\Service;
@@ -15,7 +16,7 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        if (! Gate::allows('service_access')) {
+        if (!Gate::allows('service_access')) {
             return abort(401);
         }
 
@@ -31,7 +32,7 @@ class ServicesController extends Controller
      */
     public function create()
     {
-        if (! Gate::allows('service_create')) {
+        if (!Gate::allows('service_create')) {
             return abort(401);
         }
         return view('admin.services.create');
@@ -40,23 +41,32 @@ class ServicesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        if (! Gate::allows('service_create')) {
+        if (!Gate::allows('service_create')) {
             return abort(401);
         }
-        $service = Service::create($request->all());
 
+        $data = $request->all();
+
+//        dd($data);
+        $service = new Service();
+        $service->name = $request->name;
+        $service->price = $request->price;
+        if (isset($request->visible)) {
+            $service->visible = true;
+        }
+        $service->save();
         return redirect()->route('admin.services.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -67,19 +77,22 @@ class ServicesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $service = Service::findOrFail($id);
+        $service->visible = !$service->visible;
+        $service->save();
+        return redirect()->back();
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -90,7 +103,7 @@ class ServicesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -99,10 +112,10 @@ class ServicesController extends Controller
         $service->delete();
         return redirect()->route('admin.services.index');
     }
-	
-	public function massDestroy(Request $request)
+
+    public function massDestroy(Request $request)
     {
-        if (! Gate::allows('service_delete')) {
+        if (!Gate::allows('service_delete')) {
             return abort(401);
         }
         if ($request->input('ids')) {

@@ -394,7 +394,7 @@
                                 <div class="col-xs-12 form-group">
                                     {!! Form::label('finish_time', 'Конец', ['class' => 'control-label']) !!}
                                     <div class="form-inline">
-                                        <select name="finish_hour" id="finish_hour" class="form-control" required
+                                        <select name="finish_hour" disabled id="finish_hour" class="form-control" required
                                                 style="max-width: 85px;">
                                             <option value="-1" selected>Час</option>
                                             <option value="08">08</option>
@@ -415,7 +415,7 @@
                                             <option value="23">23</option>
                                         </select>
                                         :
-                                        <select name="finish_minute" id="finish_minute" class="form-control" required
+                                        <select name="finish_minute" disabled id="finish_minute" class="form-control" required
                                                 style="max-width: 85px;">
                                             <option value="-1" selected>Мин</option>
                                             <option value="00">00</option>
@@ -649,7 +649,7 @@
         var start_minutes = parseInt($("#starting_minute").val());
         var finish_hour = parseInt($("#finish_hour").val());
         var finish_minutes = parseInt($("#finish_minute").val());
-        var total_hours = (((finish_hour * 60 + finish_minutes) - (start_hour * 60 + start_minutes)) / 60);
+        var total_hours = 1;
         var price = parseFloat($("#price").val());
         $("#price_total").html(price * total_hours);
         $("#time").html(total_hours);
@@ -658,6 +658,12 @@
         }
     }
 
+    $('#starting_hour').on('change', function(){
+        $('#finish_hour').val(parseInt($('#starting_hour').val()) + 1);
+    })
+    $('#starting_minute').on('change', function() {
+        $('#finish_minute').val(parseInt($('#starting_minute').val()));
+    })
     function UpdateEmployees(service_id, date) {
         if (service_id != "" && date != "") {
             $.ajax({

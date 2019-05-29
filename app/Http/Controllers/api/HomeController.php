@@ -23,7 +23,7 @@ class HomeController extends Controller
     }
 
     public function getServices(){
-        $services = Service::all();
+        $services = Service::where('visible', true)->all();
         return response()->json($services);
     }
 

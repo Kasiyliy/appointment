@@ -34,7 +34,7 @@ class HomeController extends Controller
         $relations = [
             'clients' => \App\Client::get(),
             'employees' => \App\Employee::get(),
-            'services' => \App\Service::get(),
+            'services' => \App\Service::where('visible' , true)->get(),
             'comments' => \App\Comment::orderBy('id', 'desc')->get()->take(3),
         ];
         return view('front.index',$relations);

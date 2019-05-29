@@ -5,7 +5,7 @@
     @can('service_create')
     <p>
         <a href="{{ route('admin.services.create') }}" class="btn btn-success">@lang('quickadmin.qa_add_new')</a>
-        
+
     </p>
     @endcan
 
@@ -24,10 +24,11 @@
 
                         <th>@lang('quickadmin.services.fields.name')</th>
                         <th>@lang('quickadmin.services.fields.price')</th>
+                        <th>Visible</th>
                         <th>&nbsp;</th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
                     @if (count($services) > 0)
                         @foreach ($services as $service)
@@ -38,12 +39,16 @@
 
                                 <td>{{ $service->name }}</td>
                                 <td>{{ $service->price }}</td>
+                                <td>{{ $service->visible ? 'Yes' : 'No' }}</td>
                                 <td>
-                                    @can('service_view')
-                                    <a href="{{ route('admin.services.show',[$service->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
-                                    @endcan
                                     @can('service_edit')
-                                    <a href="{{ route('admin.services.edit',[$service->id]) }}" class="btn btn-xs btn-info">@lang('quickadmin.qa_edit')</a>
+                                    <a href="{{ route('admin.services.edit',[$service->id]) }}" class="btn btn-xs btn-info">
+                                    @if($service->visible)
+                                        Сделать невидимым
+                                    @else
+                                        Сделать видимым
+                                    @endif
+                                    </a>
                                     @endcan
                                     @can('service_delete')
                                     {!! Form::open(array(
@@ -68,7 +73,7 @@
     </div>
 @stop
 
-@section('javascript') 
+@section('javascript')
     <script>
         @can('service_delete')
             window.route_mass_crud_entries_destroy = '{{ route('admin.services.mass_destroy') }}';

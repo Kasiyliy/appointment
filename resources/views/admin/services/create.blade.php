@@ -8,7 +8,7 @@
         <div class="panel-heading">
             @lang('quickadmin.qa_create')
         </div>
-        
+
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12 form-group">
@@ -33,7 +33,19 @@
                         </p>
                     @endif
                 </div>
-            </div>			
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('visible', 'Visisble*', ['class' => 'control-label']) !!}
+                    {!! Form::checkbox('visible', old('visible'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('visible'))
+                        <p class="help-block">
+                            {{ $errors->first('visible') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
         </div>
     </div>
 
