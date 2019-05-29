@@ -181,7 +181,7 @@ class EmployeesController extends Controller
         $html .= "<ul class='list-inline'>";
         if (is_object($employees) && count($employees) > 0):
             foreach ($employees as $employee) :
-                $html .= "<li><label><input type='radio' name='employee_id' class='employee_id' value='" . $employee->id . "'> " . $employee->first_name . " " . $employee->last_name . " (<span class='starting_hour_$employee->id'>" . date("H", strtotime($employee->start_time)) . "</span>:<span class='starting_minute_$employee->id'>" . date("i", strtotime($employee->start_time)) . "</span> - <span class='finish_hour_$employee->id'>" . date("H", strtotime($employee->finish_time)) . "</span>:<span class='finish_minute_$employee->id'>" . date("i", strtotime($employee->finish_time)) . "</span>)</label></li>";
+                $html .= "<li><label><input type='radio' name='employee_id' class='employee_id' value='" . $employee->id . "'> " . $employee->first_name . " " . $employee->last_name ."</label></li>";
             endforeach;
         else :
             $html .= "<li>No employees working on your selected date</li>";
