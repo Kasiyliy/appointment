@@ -49,12 +49,12 @@
 <div class="site-wrap">
 
     {{--<div class="site-mobile-menu">--}}
-        {{--<div class="site-mobile-menu-header">--}}
-            {{--<div class="site-mobile-menu-close mt-3">--}}
-                {{--<span class="icon-close2 js-menu-toggle"></span>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="site-mobile-menu-body"></div>--}}
+    {{--<div class="site-mobile-menu-header">--}}
+    {{--<div class="site-mobile-menu-close mt-3">--}}
+    {{--<span class="icon-close2 js-menu-toggle"></span>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--<div class="site-mobile-menu-body"></div>--}}
     {{--</div> <!-- .site-mobile-menu -->--}}
 
     <div class="my-slider">
@@ -71,7 +71,7 @@
             </div>
         </div>
 
-        <div class="site-blocks-cover item"  style="background-image: url({{asset('front/images/hero_bg_1.jpg')}})"
+        <div class="site-blocks-cover item" style="background-image: url({{asset('front/images/hero_bg_1.jpg')}})"
              data-aos="fade" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row align-items-center" style="text-align: center">
@@ -98,39 +98,41 @@
     <div class="site-block-1">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="site-block-feature d-flex p-4 rounded mb-4">
+                <div class="col-md-4">
+                    <div class="site-block-feature flex p-4 rounded mb-4">
                         <div class="mr-3">
                             <span class="icon flaticon-tooth font-weight-light text-white h2"></span>
                         </div>
                         <div class="text">
                             <h3>Современное оборудование</h3>
-                            <p>В нашей клинике используется новейшее немецкое стоматологическое оборудование, имеющее
-                                все необходимые сертификаты и лицензии</p>
+                            <p style="font-size:15px">В нашей клинике используется новейшее немецкое стоматологическое
+                                оборудование, имеющее
+                                все необходимые сертификаты и лицензии.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="site-block-feature d-flex p-4 rounded mb-4">
+                <div class="col-md-4">
+                    <div class="site-block-feature flex p-4 rounded mb-4">
                         <div class="mr-3">
                             <span class="icon flaticon-tooth-whitening font-weight-light text-white h2"></span>
                         </div>
                         <div class="text">
                             <h3>Первая консультация бесплатно</h3>
-                            <p>В нашей клинике вы можете получить первую консультацию бесплатно, а также получить
-                                рекомендации и возможные варианты лечения.
-                            </p>
+                            <p style="font-size:15px">В нашей клинике вы можете получить первую консультацию бесплатно,
+                                а также получить
+                                рекомендации и возможные варианты лечения.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="site-block-feature d-flex p-4 rounded mb-4">
+                <div class="col-md-4">
+                    <div class="site-block-feature flex p-4 rounded mb-4">
                         <div class="mr-3">
                             <span class="icon flaticon-tooth-pliers font-weight-light text-white h2"></span>
                         </div>
                         <div class="text">
                             <h3>Квалифицированные стоматологи</h3>
-                            <p>Наши стоматологи имеют высшее профессиональное образование, и высокую квалификацию</p>
+                            <p style="font-size:18px">Наши стоматологи имеют высшее профессиональное образование, и
+                                высокую квалификацию</p>
                         </div>
                     </div>
                 </div>
@@ -141,13 +143,18 @@
     <div class="promo py-5 bg-primary">
         <div class="container text-center">
             <div class="col-md-4">
-                <h2 class="site-heading text-white"><a href="#price_list" class="btn btn-primary">Прайс лист</a></h2>
+                <h2 class="site-heading text-white"><a href="#price_list" class="btn btn-primary"><i class="fa fa-info"
+                                                                                                     aria-hidden="true"></i>
+                        Прайс лист</a></h2>
             </div>
             <div class="col-md-4">
-                <h2 class="site-heading text-white"><a href="#reviews" class="btn btn-primary">Отзывы</a></h2>
+                <h2 class="site-heading text-white"><a href="#reviews" class="btn btn-primary"><i class="fa fa-comments"
+                                                                                                  aria-hidden="true"></i>
+                        Оставить отзыв</a></h2>
             </div>
             <div class="col-md-4">
-                <h2 class="site-heading text-white"><a href="#zapis" class="btn btn-primary">Запись</a></h2>
+                <h2 class="site-heading text-white"><a href="#zapis" class="btn btn-primary"><i
+                                class="fa fa-calendar-check-o" aria-hidden="true"></i> Записаться</a></h2>
             </div>
         </div>
     </div>
@@ -161,7 +168,7 @@
                     <div class="row row-items">
 
                         <div class="col-md-6">
-                            <a href="#" class="d-flex text-center feature active p-4 mb-4">
+                            <a href="#price_list" class="d-flex text-center feature active p-4 mb-4">
                   <span class="align-self-center w-100">
                     <span class="d-block mb-3">
                       <span class="flaticon-tooth-whitening display-3"></span>
@@ -172,7 +179,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <a href="#" class="d-flex text-center feature p-4 mb-4">
+                            <a href="#price_list" class="d-flex text-center feature p-4 mb-4">
                   <span class="align-self-center w-100">
                     <span class="d-block mb-3">
                       <span class="flaticon-stethoscope display-3"></span>
@@ -181,11 +188,30 @@
                   </span>
                             </a>
                         </div>
-
+                        <div class="col-md-6">
+                            <a href="#price_list" class="d-flex text-center feature p-4 mb-4">
+                  <span class="align-self-center w-100">
+                    <span class="d-block mb-3">
+                      <span class="flaticon-tooth-pliers display-3"></span>
+                    </span>
+                    <h3>Профессиональная чистка зубов</h3>
+                  </span>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#price_list" class="d-flex text-center active feature p-4 mb-4">
+                  <span class="align-self-center w-100">
+                    <span class="d-block mb-3">
+                      <span class="flaticon-tooth-pliers display-3"></span>
+                    </span>
+                    <h3>Лечение кариеса</h3>
+                  </span>
+                            </a>
+                        </div>
                     </div>
                     <div class="row row-items last">
                         <div class="col-md-6">
-                            <a href="#" class="d-flex text-center feature p-4 mb-4">
+                            <a href="#price_list" class="d-flex text-center active feature p-4 mb-4">
                   <span class="align-self-center w-100">
                     <span class="d-block mb-3">
                       <span class="flaticon-first-aid-kit display-3"></span>
@@ -195,15 +221,26 @@
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <a href="#" class="d-flex text-center active feature p-4 mb-4">
+                            <a href="#price_list" class="d-flex text-center feature p-4 mb-4">
                   <span class="align-self-center w-100">
                     <span class="d-block mb-3">
                       <span class="flaticon-tooth-pliers display-3"></span>
                     </span>
-                    <h3>Лечение кариеса</h3>
+                    <h3>Диагностика</h3>
                   </span>
                             </a>
                         </div>
+                        <div class="col-md-12">
+                            <a href="#price_list" class="d-flex text-center feature p-4 mb-4">
+                  <span class="align-self-center w-100">
+                    <span class="d-block mb-3">
+                      <span class="flaticon-tooth-pliers display-3"></span>
+                    </span>
+                    <h3>Удаление зубов</h3>
+                  </span>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -217,12 +254,14 @@
                 <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2">
                     <div class="pl-lg-5 ml-lg-5">
                         <h2 class="site-heading text-black">Онлайн <strong>Запись</strong> К Врачу</h2>
-                        <p class="text-black-opacity-5">Новейшее оборудование, опытные доктора, система внутреннего
-                            контроля качества услуг все это позволяет нам гарантировать высокий уровень.
-                            Для нас важно, чтобы качественная стоматология была доступна каждому.</p>
-                        <h2 class="site-heading text-black">Наши <strong>контакты</strong></h2>
-                        <p class="lead text-black">Номер: 87087526858</p>
-                        <p class="lead text-black">Почта: ansar.khafizov@gmail.com</p>
+                        <p class="text-black-opacity-3" style="font-size:20px">Запишитесь к нам, не выходя из дома! У
+                            вас теперь есть возможность выбрать нужную услугу, предпочитаемого стоматолога в удобное вам
+                            время! Оставьте свои данные и дождитесь SMS подтверждения.</p>
+                        <h2 class="site-heading text-black" style="text-align: right">Наши <strong>контакты</strong>
+                        </h2>
+                        <p class="lead text-black" style="text-align: right">Номер: 87087526858</p>
+                        <p class="lead text-black" style="text-align: right">Почта: ansar.khafizov@gmail.com</p>
+                        <p class="lead text-black" style="text-align: right">Адрес: Жандосова Манаса, 34/1</p>
                     </div>
                 </div>
                 <div class="col-lg-6 order-2 order-lg-1">
@@ -431,24 +470,26 @@
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-6 text-center">
-                    <h2 class="site-heading text-black mb-5">Наши <strong>Услуги</strong></h2>
+                    <h2 class="site-heading text-black mb-5"> Наши <strong>Услуги</strong> и <strong>Цены</strong></h2>
                 </div>
             </div>
-            <div class="row">
+
+            <table class="table table-bordered table-hover table-striped table-light">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Наименования услуг</th>
+                    <th scope="col">Стоимость</th>
+                </tr>
+                </thead>
+                <tbody>
                 @foreach($services as $service)
-                    <div class="col-md-6 col-lg-4">
-                        <div class="site-block-feature-2 d-flex rounded mb-5">
-                            <div class="mr-3">
-                                <span class="icon flaticon-tooth-whitening font-weight-light "></span>
-                            </div>
-                            <div class="text">
-                                <h3>{{$service->name}}</h3>
-                                <p>Цена: {{$service->price}}</p>
-                            </div>
-                        </div>
-                    </div>
+                    <tr>
+                        <td>{{$service->name}}</td>
+                        <td>{{$service->price}} ₸</td>
+                    </tr>
                 @endforeach
-            </div>
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -465,7 +506,7 @@
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-6 text-center">
-                    <div class="panel panel-danger">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             Оставьте свой отзыв
                         </div>
@@ -480,7 +521,7 @@
                                 {!! Form::label('text', 'Отзыв', ['class' => 'control-label']) !!}
                                 {!! Form::text('text', old('text'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
                             </div>
-                            {!! Form::submit('Оставить', ['class' => 'btn btn-default']) !!}
+                            {!! Form::submit('Оставить', ['class' => 'btn btn-primary']) !!}
                             {!! Form::close() !!}
                         </div>
                     </div>
@@ -521,6 +562,10 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;AlmatyDent
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <br>
+                        Done by: Khafizov Ansar<br>
+                        Zhakashbayev Sanzhar<br>
+                        Zhunisov Mukhammed
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -641,7 +686,7 @@
         center: true,
         controls: false,
         nav: false,
-        navContainer:false,
+        navContainer: false,
         autoplayButton: false,
         autoplayButtonOutput: false,
         autoplayResetOnVisibility: false,
