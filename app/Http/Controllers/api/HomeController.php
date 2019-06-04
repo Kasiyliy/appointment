@@ -102,8 +102,8 @@ class HomeController extends Controller
             . $appointment->finish_time  . '. Ваш обслуживающий: '
             . $employee->first_name . ' '. $employee->last_name . '.';
 
-        $appointment->save();
         $client->save();
+        $appointment->save();
 
         $url = 'https://smsc.kz/sys/send.php?login=kasya&psw=2299353a&phones=' . trim($client->phone) . '&mes='.$message;
         file_get_contents($url);
