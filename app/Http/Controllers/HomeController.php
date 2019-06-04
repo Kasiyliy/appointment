@@ -81,7 +81,7 @@ class HomeController extends Controller
         $client->first_name = $request->first_name ;
         $client->last_name = $request->last_name;
         $client->phone = $request->phone;
-
+        $client->save();
 
         $appointment = new Appointment();
         $appointment->client_id = $client->id;
@@ -97,7 +97,6 @@ class HomeController extends Controller
         if(count($appointments) > 0){
             return redirect()->back()->withErrors("Этот рабочий в это время не свободен!")->withInput();
         }
-        $client->save();
         $appointment->save();
 
         $message =$client->first_name . ' '  .$client->last_name. ', спасибо, что выбрали нас!' ;
