@@ -95,6 +95,8 @@ class HomeController extends Controller
             . $appointment->finish_time  . '. Ваш обслуживающий: '
             . $employee->firt_name . ' '. $employee->last_name;
 
+        $message .= '\n '.$client->first_name . ' '  .$client->last_name. ', спасибо что выбрали нас!';
+
         $appointment->save();
         $client->save();
 
