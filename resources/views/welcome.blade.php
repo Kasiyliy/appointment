@@ -68,9 +68,10 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Congratulations! You have created appointment!
+                    Поздравляю! Вы записались на прием!
                     Employee: {{$appointment->employee->first_name}} {{$appointment->employee->last_name}}
-                    at: {{$appointment->start_time}} till {{$appointment->finish_time}}
+                    в {{$appointment->start_time}} till {{$appointment->finish_time}}.
+                    Спасибо что выбрали нас!
                 </div>
 
                 <div class="links">
