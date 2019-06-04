@@ -55,7 +55,11 @@ class HomeController extends Controller
 
 
         $employee = \App\Employee::find($request->employee_id);
-        $working_hours = \App\WorkingHour::where('employee_id', $request->employee_id)->whereDay('date', '=', date("d", strtotime($request->date)))->whereTime('start_time', '<=', date("H:i", strtotime("".$request->starting_hour.":".$request->starting_minute.":00")))->whereTime('finish_time', '>=', date("H:i", strtotime("".$request->finish_hour.":".$request->finish_minute.":00")))->get();
+        $working_hours = \App\WorkingHour::where('employee_id', $request->employee_id)
+            ->whereDay('date', '=', date("d", strtotime($request->date)))
+            ->whereTime('start_time', '<=', date("H:i", strtotime("".$request->starting_hour.":".$request->starting_minute.":00")))
+            ->whereTime('finish_time', '>=', date("H:i", strtotime("".$request->finish_hour.":".$request->finish_minute.":00")))
+            ->get();
 
         if(!$employee->provides_service($request->service_id))
         {
@@ -71,7 +75,7 @@ class HomeController extends Controller
         $client->first_name = $request->first_name ;
         $client->last_name = $request->last_name;
         $client->phone = $request->phone;
-        $client->save();
+
 
         $appointment = new Appointment();
         $appointment->client_id = $client->id;
@@ -79,11 +83,20 @@ class HomeController extends Controller
         $appointment->start_time = "".$request->date." ".$request->starting_hour .":".$request->starting_minute.":00";
         $appointment->finish_time = "".$request->date." ".$request->finish_hour .":".$request->finish_minute.":00";
         $appointment->comments = $request->comments;
-        $appointment->save();
 
+        $appointments = Appointment::where('employee_id', $appointment->employee_id)
+            ->where('start_time' , $appointment->start_time)
+            ->where('finish_time', $appointment->finish_time)->get();
+
+        if(count($appointments) > 0){
+            response()->json(['success' => false], 200);
+        }
         $message = 'Ваш прием поставлен на ' . $appointment->start_time . ' до '
             . $appointment->finish_time  . '. Ваш обслуживающий: '
             . $employee->firt_name . ' '. $employee->last_name;
+
+        $appointment->save();
+        $client->save();
 
         $url = 'https://smsc.kz/sys/send.php?login=kasya&psw=2299353a&phones=' . trim($client->phone) . '&mes='.$message;
         file_get_contents($url);
