@@ -69,7 +69,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Поздравляю! Вы записались на прием!
-                    Employee: {{$appointment->employee->first_name}} {{$appointment->employee->last_name}}
+                    Рабочий: {{$appointment->employee->first_name}} {{$appointment->employee->last_name}}
                     в {{$appointment->start_time}} до {{$appointment->finish_time}}.
                     Спасибо что выбрали нас!
                 </div>
