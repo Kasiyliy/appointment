@@ -96,14 +96,14 @@ class HomeController extends Controller
         if(count($appointments) > 0){
             return response()->json(['success' => false], 200);
         }
+        $client->save();
+        $appointment->save();
 
         $message =$client->first_name . ' '  .$client->last_name. ', спасибо, что выбрали нас!' ;
         $message .= ' Ваш прием поставлен на ' . $appointment->start_time . ' до '
             . $appointment->finish_time  . '. Ваш обслуживающий: '
             . $employee->first_name . ' '. $employee->last_name . '.';
 
-        $client->save();
-        $appointment->save();
 
         $url = 'https://smsc.kz/sys/send.php?login=kasya&psw=2299353a&phones=' . trim($client->phone) . '&mes='.$message;
         file_get_contents($url);
