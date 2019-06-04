@@ -35,6 +35,7 @@ class HomeController extends Controller
             'clients' => \App\Client::get(),
             'employees' => \App\Employee::get(),
             'services' => \App\Service::where('visible' , true)->get(),
+            'allServices' => \App\Service::get(),
             'comments' => \App\Comment::orderBy('id', 'desc')->get()->take(3),
         ];
         return view('front.index',$relations);
@@ -81,7 +82,7 @@ class HomeController extends Controller
 
         $message = 'Ваш прием поставлен на ' . $appointment->start_time . ' до '
             . $appointment->finish_time  . '. Ваш обслуживающий: '
-            . $employee->firt_name . ' '. $employee->last_name;
+            . $employee->first_name . ' '. $employee->last_name;
 
         $url = 'https://smsc.kz/sys/send.php?login=kasya&psw=2299353a&phones=' . trim($client->phone) . '&mes='.$message;
         file_get_contents($url);

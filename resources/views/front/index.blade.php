@@ -43,7 +43,31 @@
           href="{{asset('css/jquery-ui-timepicker-addon.min.css')}}"/>
     <link rel="stylesheet"
           href="{{asset('css/bootstrap-datepicker.standalone.min.css')}}"/>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
 <div class="site-wrap">
@@ -95,56 +119,13 @@
             </div>
         </div>
     </div>
-    <div class="site-block-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="site-block-feature flex p-4 rounded mb-4">
-                        <div class="mr-3">
-                            <span class="icon flaticon-tooth font-weight-light text-white h2"></span>
-                        </div>
-                        <div class="text">
-                            <h3>Современное оборудование</h3>
-                            <p style="font-size:15px">В нашей клинике используется новейшее немецкое стоматологическое
-                                оборудование, имеющее
-                                все необходимые сертификаты и лицензии.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="site-block-feature flex p-4 rounded mb-4">
-                        <div class="mr-3">
-                            <span class="icon flaticon-tooth-whitening font-weight-light text-white h2"></span>
-                        </div>
-                        <div class="text">
-                            <h3>Первая консультация бесплатно</h3>
-                            <p style="font-size:15px">В нашей клинике вы можете получить первую консультацию бесплатно,
-                                а также получить
-                                рекомендации и возможные варианты лечения.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="site-block-feature flex p-4 rounded mb-4">
-                        <div class="mr-3">
-                            <span class="icon flaticon-tooth-pliers font-weight-light text-white h2"></span>
-                        </div>
-                        <div class="text">
-                            <h3>Квалифицированные стоматологи</h3>
-                            <p style="font-size:18px">Наши стоматологи имеют высшее профессиональное образование, и
-                                высокую квалификацию</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="promo py-5 bg-primary">
+
+    <div class="promo py-3 bg-white">
         <div class="container text-center">
             <div class="col-md-4">
-                <h2 class="site-heading text-white"><a href="#price_list" class="btn btn-primary"><i class="fa fa-info"
-                                                                                                     aria-hidden="true"></i>
+                <h2 class="site-heading text-white"><a href="#price_list" class="btn btn-primary btn-circle"><i class="fa fa-info"
+                                                                                                                aria-hidden="true"></i>
                         Прайс лист</a></h2>
             </div>
             <div class="col-md-4">
@@ -160,6 +141,24 @@
     </div>
     <div class="site-section site-block-3">
         <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center  align-self-stretch">
+                    <h2 class="site-heading text-black mb-5 " style="text-align:left"> О <br><strong>Нас</strong></h2>
+                    <h3 style="text-align:left">Новейшее оборудование, опытные доктора, система внутреннего контроля качества услуг все это позволяет нам гарантировать высокий уровень.</h3>
+                </div>
+                <div class="col-md-4 text-center align-self-stretch">
+                    <h2 class="site-heading text-black mb-5 " style="text-align:left"> Современное <strong>оборудование</strong></h2>
+                    <h3 style="text-align:left">В нашей клинике используется новейшее немецкое стоматологическое оборудование, имеющее все необходимые сертификаты и лицензии.</h3>
+                </div>
+                <div class="col-md-4 text-center align-items-stretch">
+                    <h2 class="site-heading text-black mb-5 " style="text-align:left"> Квалифицированные  <strong>стоматологи</strong></h2>
+                    <h3 style="text-align:left">Наши стоматологи имеют высшее профессиональное образование, и высокую квалификацию. Для нас важно, чтобы качественная стоматология была доступна каждому.</h3>
+                </div>
+            </div><br>
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h2 class="site-heading text-black mb-5 "> Наши <strong>Услуги</strong></h2>
+                </div></div>
             <div class="row">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <img src="{{asset('front/images/img_1.jpg')}}" alt="Image" class="img-fluid">
@@ -257,12 +256,42 @@
                         <p class="text-black-opacity-3" style="font-size:20px">Запишитесь к нам, не выходя из дома! У
                             вас теперь есть возможность выбрать нужную услугу, предпочитаемого стоматолога в удобное вам
                             время! Оставьте свои данные и дождитесь SMS подтверждения.</p>
-                        <h2 class="site-heading text-black" style="text-align: right">Наши <strong>контакты</strong>
-                        </h2>
-                        <p class="lead text-black" style="text-align: right">Номер: 87087526858</p>
-                        <p class="lead text-black" style="text-align: right">Почта: ansar.khafizov@gmail.com</p>
-                        <p class="lead text-black" style="text-align: right">Адрес: Жандосова Манаса, 34/1</p>
+                        <h2 class="site-heading text-black text-right"><strong>Рабочие</strong> дни</h2>
+                        <table class="table table-light">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Пн</th>
+                                <th scope="col">Вт</th>
+                                <th scope="col">Ср</th>
+                                <th scope="col">Чт</th>
+                                <th scope="col">Пт</th>
+                                <th scope="col">Сб</th>
+                                <th scope="col">Вс</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>09-00</td>
+                                <td>09-00</td>
+                                <td>09-00</td>
+                                <td>09-00</td>
+                                <td>09-00</td>
+                                <td>10-00</td>
+                                <td>----</td>
+                            </tr>
+                            <tr>
+                                <td>18-00</td>
+                                <td>18-00</td>
+                                <td>18-00</td>
+                                <td>18-00</td>
+                                <td>16-00</td>
+                                <td>13-30</td>
+                                <td>----</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
+
                 </div>
                 <div class="col-lg-6 order-2 order-lg-1">
 
@@ -434,7 +463,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 form-group">
-                                    {!! Form::label('comments', 'Замечания к стоматологу', ['class' => 'control-label']) !!}
+                                    {!! Form::label('comments', 'Комментарии', ['class' => 'control-label']) !!}
                                     {!! Form::textarea('comments', old('comments'), ['class' => 'form-control ', 'placeholder' => '']) !!}
                                     <p class="help-block"></p>
                                     @if($errors->has('comments'))
@@ -455,17 +484,6 @@
             </div>
         </div>
     </div>
-
-    <div class="promo py-5 bg-primary">
-        <div class="container text-center">
-            <span class="d-block h4 mb-3 font-weight-light text-white"><strong
-                        class="font-weight-bold">Новейшее оборудование, опытные доктора, система внутреннего контроля качества услуг все это позволяет нам гарантировать высокий уровень. Для нас важно, чтобы качественная стоматология была доступна каждому
-</strong></span>
-            <div id="date-countdown" class="mt-0"></div>
-        </div>
-    </div>
-
-
     <div class="site-section bg-light" id="price_list">
         <div class="container">
             <div class="row mb-5 justify-content-center">
@@ -473,25 +491,39 @@
                     <h2 class="site-heading text-black mb-5"> Наши <strong>Услуги</strong> и <strong>Цены</strong></h2>
                 </div>
             </div>
+            <p class ="text-center">
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-									controls="collapseExample">
+                    Посмотреть цены
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <div class="columns download">
+                        <p>
 
-            <table class="table table-bordered table-hover table-striped table-light">
-                <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Наименования услуг</th>
-                    <th scope="col">Стоимость</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($services as $service)
-                    <tr>
-                        <td>{{$service->name}}</td>
-                        <td>{{$service->price}} ₸</td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-        </div>
-    </div>
+                            <a href="{{asset('files/Services.pdf')}}" class="button" download><i class="fa fa-download"></i>Скачать прайс-лист</a>
+                        </p>
+
+                        <table class="table table-bordered table-hover table-striped table-light">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Наименования услуг</th>
+                                <th scope="col">Стоимость</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($allServices as $service)
+                                <tr>
+                                    <td>{{$service->name}}</td>
+                                    <td>{{$service->price}} ₸</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div></div>
 
 
     <div class="promo py-5 bg-primary" id="reviews">
@@ -504,6 +536,19 @@
 
     <div class="site-section bg-light">
         <div class="container">
+            <div class="row">
+                @foreach($comments as $comment)
+                    <div class="col-lg-4">
+                        <div class="site-block-testimony p-4 text-center active">
+                            <div>
+                                <p>{{$comment->text}}</p>
+                                <p><strong class="font-weight-bold">{{$comment->name}}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <br>
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-6 text-center">
                     <div class="panel panel-primary">
@@ -527,55 +572,43 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                @foreach($comments as $comment)
-                    <div class="col-lg-4">
-                        <div class="site-block-testimony p-4 text-center active">
-                            <div>
-                                <p>{{$comment->text}}</p>
-                                <p><strong class="font-weight-bold">{{$comment->name}}</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
         </div>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11626.636613054536!2d76.90667165!3d43.237605450000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skz!4v1558735790491!5m2!1sen!2skz"
-            width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-    <footer class="site-footer border-top">
+    <iframe src="https://www.google.com/maps/embed?	pb=!1m18!1m12!1m3!1d2907.2854274938127!2d76.89447525116877!3d43.22447497903597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388368de4a95b5ff%3A0x5fb9b8caf93345fe!2z0L_RgNC-0YHQv9C10LrRgiDQk9Cw0LPQsNGA0LjQvdCwIDE5MCwg0JDQu9C80LDRgtGLIDA1MDA2MA!5e0!3m2!1sru!2skz!4v1559497761207!5m2!1sru!2skz" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <footer class="site-footer">
         <div class="container">
-            <div class="row pt-5 mt-5 text-center">
+            <div class="row  text-center">
+                <div class="col-md-4"></div>
                 <div class="col-md-4">
+                    <br>
                     <p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <a class="btn btn-info text-white " href="/login">Войти</a>
                     </p>
-                </div>
-                <div class="col-md-4">
-                    <p>
-                        <a class="btn btn-danger text-white" href="/login">Войти</a>
-                    </p>
-                    <p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;AlmatyDent
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <br>
-                        Done by: Khafizov Ansar<br>
-                        Zhakashbayev Sanzhar<br>
-                        Zhunisov Mukhammed
-                    </p>
+                    <hr>
+                    <h3 class="site-heading text-white" style="text-align: center">Наши <strong>контакты</strong>
+                    </h3><hr>
+                    <p class="lead text-white" style="text-align: center">Номер: +7(727)274-00-02<br>+7(705)705-55-41</p>
+                    <p class="lead text-white" style="text-align: center">Почта: ansar.khafizov@gmail.com</p>
+                    <p class="lead text-white" style="text-align: center">Адрес: Гагарина, 190</p><hr>
                 </div>
                 <div class="col-md-4">
 
                 </div>
             </div>
+        </div>
+        <div class="text-center">
+            <p>
+                Done by: Khafizov Ansar<br>
+                Zhakashbayev Sanzhar<br>
+                Zhunisov Mukhammed
+            </p>
+        </div>
+        <div class="footer-copyright text-center text-white py-3">© 2019 Copyright:
+            <a href="http://www.almatydent.kz"> AlmatyDent.kz</a>
         </div>
     </footer>
 </div>
-
+<button onclick="topFunction()" id="myBtn" title="Go to top">Наверх</button>
 <script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('front/js/jquery-migrate-3.0.1.min.js')}}"></script>
 <script src="{{asset('front/js/jquery-ui.js')}}"></script>
@@ -699,6 +732,25 @@
         controlsContainer: false,
         controlsPosition: false,
     });
+</script>
+
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 </script>
 </body>
 </html>
