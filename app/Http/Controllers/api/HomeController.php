@@ -12,12 +12,17 @@ use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
     public function getEmployees(Request $request){
-        $employees = Employee::select('employees.*')->join('working_hours', function ($join) use ($request) {
-            $join->on('employees.id', '=', 'working_hours.employee_id')
-                ->where('working_hours.date', '=', $request->date);
-        })->get();
-        $service = \App\Service::find($request->service_id);
 
+        $employees = Employee::select('employees.*')
+            ->join('working_hours', function ($join) use ($request) {
+                $join->on('employees.id', '=', 'working_hours.employee_id')
+                    ->where('working_hours.date', '=', $request->date);
+            })
+            ->join('employee_service', function ($join) use ($request) {
+                $join->on('employees.id', '=', 'employee_service.employee_id')
+                    ->where('employee_service.service_id', '=', $request->service_id);
+            })
+            ->get();
 
         return response()->json($employees);
     }

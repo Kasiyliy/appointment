@@ -62,11 +62,11 @@ class AppointmentsController extends Controller
 
 		if(!$employee->provides_service($request->service_id))
         {
-            return redirect()->back()->withErrors("This employee doesn't provide your selected service")->withInput();
+            return redirect()->back()->withErrors("Этот сотрудник не предоставляет выбранную вами услугу")->withInput();
         }
         if($working_hours->isEmpty())
         {
-            return redirect()->back()->withErrors("This employee isn't working at your selected time")->withInput();
+            return redirect()->back()->withErrors("Этот сотрудник не работает в выбранное вами время")->withInput();
         }
 		$appointment = new Appointment;
 		$appointment->client_id = $request->client_id;

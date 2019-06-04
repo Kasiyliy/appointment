@@ -124,8 +124,9 @@
     <div class="promo py-3 bg-white">
         <div class="container text-center">
             <div class="col-md-4">
-                <h2 class="site-heading text-white"><a href="#price_list" class="btn btn-primary btn-circle"><i class="fa fa-info"
-                                                                                                                aria-hidden="true"></i>
+                <h2 class="site-heading text-white"><a href="#price_list" class="btn btn-primary btn-circle"><i
+                                class="fa fa-info"
+                                aria-hidden="true"></i>
                         Прайс лист</a></h2>
             </div>
             <div class="col-md-4">
@@ -144,21 +145,28 @@
             <div class="row">
                 <div class="col-md-4 text-center  align-self-stretch">
                     <h2 class="site-heading text-black mb-5 " style="text-align:left"> О <br><strong>Нас</strong></h2>
-                    <h3 style="text-align:left">Новейшее оборудование, опытные доктора, система внутреннего контроля качества услуг все это позволяет нам гарантировать высокий уровень.</h3>
+                    <h3 style="text-align:left">Новейшее оборудование, опытные доктора, система внутреннего контроля
+                        качества услуг все это позволяет нам гарантировать высокий уровень.</h3>
                 </div>
                 <div class="col-md-4 text-center align-self-stretch">
-                    <h2 class="site-heading text-black mb-5 " style="text-align:left"> Современное <strong>оборудование</strong></h2>
-                    <h3 style="text-align:left">В нашей клинике используется новейшее немецкое стоматологическое оборудование, имеющее все необходимые сертификаты и лицензии.</h3>
+                    <h2 class="site-heading text-black mb-5 " style="text-align:left"> Современное
+                        <strong>оборудование</strong></h2>
+                    <h3 style="text-align:left">В нашей клинике используется новейшее немецкое стоматологическое
+                        оборудование, имеющее все необходимые сертификаты и лицензии.</h3>
                 </div>
                 <div class="col-md-4 text-center align-items-stretch">
-                    <h2 class="site-heading text-black mb-5 " style="text-align:left"> Квалифицированные  <strong>стоматологи</strong></h2>
-                    <h3 style="text-align:left">Наши стоматологи имеют высшее профессиональное образование, и высокую квалификацию. Для нас важно, чтобы качественная стоматология была доступна каждому.</h3>
+                    <h2 class="site-heading text-black mb-5 " style="text-align:left"> Квалифицированные <strong>стоматологи</strong>
+                    </h2>
+                    <h3 style="text-align:left">Наши стоматологи имеют высшее профессиональное образование, и высокую
+                        квалификацию. Для нас важно, чтобы качественная стоматология была доступна каждому.</h3>
                 </div>
-            </div><br>
+            </div>
+            <br>
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-6 text-center">
                     <h2 class="site-heading text-black mb-5 "> Наши <strong>Услуги</strong></h2>
-                </div></div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <img src="{{asset('front/images/img_1.jpg')}}" alt="Image" class="img-fluid">
@@ -395,8 +403,8 @@
                                         <select name="starting_hour" id="starting_hour" class="form-control" required
                                                 style="max-width: 85px;">
                                             <option value="-1" selected>Час</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
                                             <option value="10">10</option>
                                             <option value="11">11</option>
                                             <option value="12">12</option>
@@ -410,11 +418,8 @@
                                         :
                                         <select name="starting_minute" id="starting_minute" class="form-control"
                                                 required style="max-width: 85px;">
-                                            <option value="-1" selected>Мин</option>
-                                            <option value="00">00</option>
-                                            <option value="15">15</option>
-                                            <option value="30">30</option>
-                                            <option value="45">45</option>
+                                            <option value="-1">Мин</option>
+                                            <option value="00" selected>00</option>
                                         </select>
                                     </div>
                                 </div>
@@ -423,11 +428,12 @@
                                 <div class="col-xs-12 form-group">
                                     {!! Form::label('finish_time', 'Конец', ['class' => 'control-label']) !!}
                                     <div class="form-inline">
-                                        <select name="finish_hour" disabled id="finish_hour" class="form-control" required
+                                        <select name="finish_hour" readonly id="finish_hour" class="form-control"
+                                                required
                                                 style="max-width: 85px;">
                                             <option value="-1" selected>Час</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
                                             <option value="10">10</option>
                                             <option value="11">11</option>
                                             <option value="12">12</option>
@@ -444,13 +450,11 @@
                                             <option value="23">23</option>
                                         </select>
                                         :
-                                        <select name="finish_minute" disabled id="finish_minute" class="form-control" required
+                                        <select name="finish_minute" readonly id="finish_minute" class="form-control"
+                                                required
                                                 style="max-width: 85px;">
-                                            <option value="-1" selected>Мин</option>
-                                            <option value="00">00</option>
-                                            <option value="15">15</option>
-                                            <option value="30">30</option>
-                                            <option value="45">45</option>
+                                            <option value="-1" >Мин</option>
+                                            <option value="00" selected>00</option>
                                         </select>
                                     </div>
                                 </div>
@@ -466,10 +470,13 @@
                                     {!! Form::label('comments', 'Комментарии', ['class' => 'control-label']) !!}
                                     {!! Form::textarea('comments', old('comments'), ['class' => 'form-control ', 'placeholder' => '']) !!}
                                     <p class="help-block"></p>
-                                    @if($errors->has('comments'))
-                                        <p class="help-block">
-                                            {{ $errors->first('comments') }}
-                                        </p>
+                                    @if($errors->any())
+
+                                        @foreach ($errors->all() as $error)
+                                            <p class="help-block">
+                                            <div>{{$error}}</div>
+                                            </p>
+                                        @endforeach
                                     @endif
                                 </div>
                             </div>
@@ -491,8 +498,9 @@
                     <h2 class="site-heading text-black mb-5"> Наши <strong>Услуги</strong> и <strong>Цены</strong></h2>
                 </div>
             </div>
-            <p class ="text-center">
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-									controls="collapseExample">
+            <p class="text-center">
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
+                   aria-expanded="false" aria- controls="collapseExample">
                     Посмотреть цены
                 </a>
             </p>
@@ -501,7 +509,8 @@
                     <div class="columns download">
                         <p>
 
-                            <a href="{{asset('files/Services.pdf')}}" class="button" download><i class="fa fa-download"></i>Скачать прайс-лист</a>
+                            <a href="{{asset('files/Services.pdf')}}" class="button" download><i
+                                        class="fa fa-download"></i>Скачать прайс-лист</a>
                         </p>
 
                         <table class="table table-bordered table-hover table-striped table-light">
@@ -523,7 +532,8 @@
                     </div>
                 </div>
             </div>
-        </div></div>
+        </div>
+    </div>
 
 
     <div class="promo py-5 bg-primary" id="reviews">
@@ -574,7 +584,8 @@
             </div>
         </div>
     </div>
-    <iframe src="https://www.google.com/maps/embed?	pb=!1m18!1m12!1m3!1d2907.2854274938127!2d76.89447525116877!3d43.22447497903597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388368de4a95b5ff%3A0x5fb9b8caf93345fe!2z0L_RgNC-0YHQv9C10LrRgiDQk9Cw0LPQsNGA0LjQvdCwIDE5MCwg0JDQu9C80LDRgtGLIDA1MDA2MA!5e0!3m2!1sru!2skz!4v1559497761207!5m2!1sru!2skz" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?	pb=!1m18!1m12!1m3!1d2907.2854274938127!2d76.89447525116877!3d43.22447497903597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388368de4a95b5ff%3A0x5fb9b8caf93345fe!2z0L_RgNC-0YHQv9C10LrRgiDQk9Cw0LPQsNGA0LjQvdCwIDE5MCwg0JDQu9C80LDRgtGLIDA1MDA2MA!5e0!3m2!1sru!2skz!4v1559497761207!5m2!1sru!2skz"
+            width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     <footer class="site-footer">
         <div class="container">
             <div class="row  text-center">
@@ -586,10 +597,13 @@
                     </p>
                     <hr>
                     <h3 class="site-heading text-white" style="text-align: center">Наши <strong>контакты</strong>
-                    </h3><hr>
-                    <p class="lead text-white" style="text-align: center">Номер: +7(727)274-00-02<br>+7(705)705-55-41</p>
+                    </h3>
+                    <hr>
+                    <p class="lead text-white" style="text-align: center">Номер: +7(727)274-00-02<br>+7(705)705-55-41
+                    </p>
                     <p class="lead text-white" style="text-align: center">Почта: ansar.khafizov@gmail.com</p>
-                    <p class="lead text-white" style="text-align: center">Адрес: Гагарина, 190</p><hr>
+                    <p class="lead text-white" style="text-align: center">Адрес: Гагарина, 190</p>
+                    <hr>
                 </div>
                 <div class="col-md-4">
 
@@ -691,12 +705,13 @@
         }
     }
 
-    $('#starting_hour').on('change', function(){
+    $('#starting_hour').on('change', function () {
         $('#finish_hour').val(parseInt($('#starting_hour').val()) + 1);
     })
-    $('#starting_minute').on('change', function() {
+    $('#starting_minute').on('change', function () {
         $('#finish_minute').val(parseInt($('#starting_minute').val()));
     })
+
     function UpdateEmployees(service_id, date) {
         if (service_id != "" && date != "") {
             $.ajax({
@@ -736,7 +751,9 @@
 
 <script>
     // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
+    window.onscroll = function () {
+        scrollFunction()
+    };
 
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {

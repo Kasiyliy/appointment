@@ -4,12 +4,12 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-success">
-                <div class="panel-heading">{{ ucfirst(config('app.name')) }} Login</div>
+                <div class="panel-heading">{{ ucfirst(config('app.name')) }} Войти</div>
                 <div class="panel-body">
-                    
+
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were problems with input:
+                            <strong>Упс!</strong> Ошибки в ваших введенных данных:
                             <br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label">Password</label>
+                            <label class="col-md-4 control-label">Пароль</label>
 
                             <div class="col-md-6">
                                 <input type="password"
@@ -50,7 +50,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <a href="{{ route('auth.password.reset') }}">Forgot your password?</a>
+                                <a href="{{ route('auth.password.reset') }}">Забыли пароль?</a>
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <label>
                                     <input type="checkbox"
-                                           name="remember"> Remember me
+                                           name="remember"> Запомнить меня
                                 </label>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                                 <button type="submit"
                                         class="btn btn-primary"
                                         style="margin-right: 15px;">
-                                    Login
+                                    Войти
                                 </button>
                             </div>
                         </div>

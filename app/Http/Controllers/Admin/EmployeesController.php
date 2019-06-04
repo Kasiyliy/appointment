@@ -164,27 +164,33 @@ class EmployeesController extends Controller
     public function GetEmployees(Request $request)
     {
 
-        $employees = Employee::select('employees.*')->join('working_hours', function ($join) use ($request) {
-            $join->on('employees.id', '=', 'working_hours.employee_id')
-                ->where('working_hours.date', '=', $request->date);
-        })->get();
+        $employees = Employee::select('employees.*')
+            ->join('working_hours', function ($join) use ($request) {
+                $join->on('employees.id', '=', 'working_hours.employee_id')
+                    ->where('working_hours.date', '=', $request->date);
+            })
+            ->join('employee_service', function ($join) use ($request) {
+                $join->on('employees.id', '=', 'employee_service.employee_id')
+                    ->where('employee_service.service_id', '=', $request->service_id);
+            })
+            ->get();
 
         $today = date("Y-m-d");
-        if($today > $request->date) {
+        if ($today > $request->date) {
             $employees = [];
         }
-        $service = \App\Service::find($request->service_id);
+
         $html = "";
         $html .= "<div class='row employees'>";
         $html .= "<div class='col-xs-12 form-group'>";
-        $html .= "<label class='control-label'>Employee*</label>";
+        $html .= "<label class='control-label'>Сотрудник*</label>";
         $html .= "<ul class='list-inline'>";
         if (is_object($employees) && count($employees) > 0):
             foreach ($employees as $employee) :
                 $html .= "<li><label><input type='radio' name='employee_id' class='employee_id' value='" . $employee->id . "'> " . $employee->first_name . " " . $employee->last_name . " (<span class='starting_hour_$employee->id'>" . date("H", strtotime($employee->start_time)) . "</span>:<span class='starting_minute_$employee->id'>" . date("i", strtotime($employee->start_time)) . "</span> - <span class='finish_hour_$employee->id'>" . date("H", strtotime($employee->finish_time)) . "</span>:<span class='finish_minute_$employee->id'>" . date("i", strtotime($employee->finish_time)) . "</span>)</label></li>";
             endforeach;
         else :
-            $html .= "<li>No employees working on your selected date</li>";
+            $html .= "<li>Нет сотрудников, работающих на выбранную вами дату</li>";
         endif;
         $html .= "</ul>";
         $html .= "</div>";
