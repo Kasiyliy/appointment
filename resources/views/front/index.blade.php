@@ -123,20 +123,26 @@
 
     <div class="promo py-3 bg-white">
         <div class="container text-center">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h2 class="site-heading text-white"><a href="#price_list" class="btn btn-primary btn-circle"><i
                                 class="fa fa-info"
                                 aria-hidden="true"></i>
                         Прайс лист</a></h2>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h2 class="site-heading text-white"><a href="#reviews" class="btn btn-primary"><i class="fa fa-comments"
                                                                                                   aria-hidden="true"></i>
                         Оставить отзыв</a></h2>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h2 class="site-heading text-white"><a href="#zapis" class="btn btn-primary"><i
                                 class="fa fa-calendar-check-o" aria-hidden="true"></i> Записаться</a></h2>
+            </div>
+            <div class="col-md-3">
+                <h2 class="site-heading text-white"><a href="#contact" class="btn btn-primary btn-circle"><i
+                                class="fa fa-info"
+                                aria-hidden="true"></i>
+                        Контакты</a></h2>
             </div>
         </div>
     </div>
@@ -586,7 +592,7 @@
     </div>
     <iframe src="https://www.google.com/maps/embed?	pb=!1m18!1m12!1m3!1d2907.2854274938127!2d76.89447525116877!3d43.22447497903597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388368de4a95b5ff%3A0x5fb9b8caf93345fe!2z0L_RgNC-0YHQv9C10LrRgiDQk9Cw0LPQsNGA0LjQvdCwIDE5MCwg0JDQu9C80LDRgtGLIDA1MDA2MA!5e0!3m2!1sru!2skz!4v1559497761207!5m2!1sru!2skz"
             width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    <footer class="site-footer">
+    <footer class="site-footer" id = "contact">
         <div class="container">
             <div class="row  text-center">
                 <div class="col-md-4"></div>
@@ -599,8 +605,7 @@
                     <h3 class="site-heading text-white" style="text-align: center">Наши <strong>контакты</strong>
                     </h3>
                     <hr>
-                    <p class="lead text-white" style="text-align: center">Номер: +7(727)274-00-02<br>+7(705)705-55-41
-                    </p>
+                    <p class="lead text-white" style="text-align: center">Номер: +7(727)274-00-02<br>     +7(705)705-55-41</p>
                     <p class="lead text-white" style="text-align: center">Почта: ansar.khafizov@gmail.com</p>
                     <p class="lead text-white" style="text-align: center">Адрес: Гагарина, 190</p>
                     <hr>
