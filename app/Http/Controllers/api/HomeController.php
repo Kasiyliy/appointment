@@ -32,6 +32,11 @@ class HomeController extends Controller
         return response()->json($services);
     }
 
+    public function getAllServices(){
+        $services = Service::all();
+        return response()->json($services);
+    }
+
     public function getService(Request $request){
         $service = Service::findOrFail($request->service_id);
         return response()->json($service);
