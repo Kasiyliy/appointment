@@ -91,11 +91,11 @@ class HomeController extends Controller
         if(count($appointments) > 0){
             response()->json(['success' => false], 200);
         }
-        $message = 'Ваш прием поставлен на ' . $appointment->start_time . ' до '
+
+        $message =$client->first_name . ' '  .$client->last_name. ', спасибо, что выбрали нас!' ;
+        $message .= ' Ваш прием поставлен на ' . $appointment->start_time . ' до '
             . $appointment->finish_time  . '. Ваш обслуживающий: '
             . $employee->first_name . ' '. $employee->last_name . '.';
-
-        $message .= ' '.$client->first_name . ' '  .$client->last_name. ', спасибо, что выбрали нас!';
 
         $appointment->save();
         $client->save();

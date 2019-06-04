@@ -100,11 +100,12 @@ class HomeController extends Controller
         $client->save();
         $appointment->save();
 
-        $message = 'Ваш прием поставлен на ' . $appointment->start_time . ' до '
+        $message =$client->first_name . ' '  .$client->last_name. ', спасибо, что выбрали нас!' ;
+        $message .= ' Ваш прием поставлен на ' . $appointment->start_time . ' до '
             . $appointment->finish_time  . '. Ваш обслуживающий: '
             . $employee->first_name . ' '. $employee->last_name . '.';
 
-        $message .= ' '.$client->first_name . ' '  .$client->last_name. ', спасибо, что выбрали нас!';
+
 
         $url = 'https://smsc.kz/sys/send.php?login=kasya&psw=2299353a&phones=' . trim($client->phone) . '&mes='.$message;
 //        dd($url);

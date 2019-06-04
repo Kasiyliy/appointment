@@ -164,7 +164,7 @@ class EmployeesController extends Controller
     public function GetEmployees(Request $request)
     {
 
-        $employees = Employee::select('employees.*')
+        $employees = DB::table('employees')->select('employees.*', 'working_hours.start_time','working_hours.finish_time')
             ->join('working_hours', function ($join) use ($request) {
                 $join->on('employees.id', '=', 'working_hours.employee_id')
                     ->where('working_hours.date', '=', $request->date);
@@ -179,6 +179,7 @@ class EmployeesController extends Controller
         if ($today > $request->date) {
             $employees = [];
         }
+
 
         $html = "";
         $html .= "<div class='row employees'>";
