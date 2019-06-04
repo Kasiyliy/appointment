@@ -428,7 +428,7 @@
                                 <div class="col-xs-12 form-group">
                                     {!! Form::label('finish_time', 'Конец', ['class' => 'control-label']) !!}
                                     <div class="form-inline">
-                                        <select name="finish_hour" readonly id="finish_hour" class="form-control"
+                                        <select name="finish_hour"  style="pointer-events:none;" readonly="readonly" id="finish_hour" class="form-control"
                                                 required
                                                 style="max-width: 85px;">
                                             <option value="-1" selected>Час</option>
@@ -450,7 +450,7 @@
                                             <option value="23">23</option>
                                         </select>
                                         :
-                                        <select name="finish_minute" readonly id="finish_minute" class="form-control"
+                                        <select name="finish_minute" style="pointer-events:none;" readonly="readonly" id="finish_minute" class="form-control"
                                                 required
                                                 style="max-width: 85px;">
                                             <option value="-1" >Мин</option>

@@ -105,7 +105,8 @@ class HomeController extends Controller
             . $employee->first_name . ' '. $employee->last_name;
 
         $url = 'https://smsc.kz/sys/send.php?login=kasya&psw=2299353a&phones=' . trim($client->phone) . '&mes='.$message;
-        file_get_contents($url);
+        dd($url);
+//        file_get_contents($url);
 
         return view('welcome', compact('appointment'));
     }
