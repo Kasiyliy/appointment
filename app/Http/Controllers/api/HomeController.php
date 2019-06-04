@@ -94,7 +94,7 @@ class HomeController extends Controller
             ->where('finish_time', $appointment->finish_time)->get();
 
         if(count($appointments) > 0){
-            response()->json(['success' => false], 200);
+            return response()->json(['success' => false], 200);
         }
 
         $message =$client->first_name . ' '  .$client->last_name. ', спасибо, что выбрали нас!' ;
